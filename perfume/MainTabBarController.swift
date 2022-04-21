@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import Then
 
 class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .blue
+        self.viewControllers = [CameraViewController(),
+                                MyPageViewController(),
+                                GalaryViewController()]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }
 
